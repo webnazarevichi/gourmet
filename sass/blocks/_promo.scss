@@ -1,0 +1,46 @@
+.promo{
+    background-color: $bg_color;
+    padding-top: 54px;
+    display: flex;
+    align-items: center;
+    h1{
+        font-size: 1px;
+        color: $bg_color;
+    }
+    &__img{
+        width: 800px;
+        margin: 0 auto;
+        img{
+            width: 100%;
+        }
+    }   
+}
+
+@media screen and (max-width : 1200px) {
+    .promo{
+        background-color: $bg_color;
+        padding-top: 54px;
+        padding-bottom: 54px;
+        &__img{
+            width: auto;
+            margin: 0 auto;
+            img{
+                width: 100%;
+            }
+        }   
+    }
+}
+
+@media screen and(max-width: 575px){
+    .promo{
+        height: 80vh;
+        padding: 0;
+        &__img{
+            width: auto;
+            margin: 0 auto;
+            img{
+                width: 100%;
+            }
+        }   
+    }
+}

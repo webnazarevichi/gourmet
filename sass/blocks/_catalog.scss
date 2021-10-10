@@ -1,0 +1,183 @@
+.catalog{
+    background: $bg_color;
+    padding: 100px 0 0;
+    &__title{
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        font-size: 45px;
+        line-height: 50px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    &__wrapper{
+        margin-top: 125px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__cart{
+        position: relative;
+        width: 270px;
+        height: 423px;
+        margin: 0 10px 100px;
+        background: $cart_color;
+        border: 1px solid #7E7D7D;
+        box-shadow: 8px 8px 9px rgba(0, 0, 0, 0.44);
+        overflow: visible;
+        padding-top: 125px;
+        &:nth-child(1), &:nth-child(5), &:nth-child(9){
+            margin: 0 10px 100px 0;
+        }
+        &:nth-child(4), &:nth-child(8), &:nth-child(12){
+            margin: 0 0 100px 10px;
+        }
+        &_img{
+            position: absolute;
+            display: block;
+            width: 100%;
+            &_0{
+                top:-70px;
+            }
+            &_1{
+                top:-60px;
+            }
+            &_2{
+                top:-75px;
+            }
+            &_3{
+                top:-60px;
+            }
+            &_4{
+                top:-70px;
+            }
+            &_5{
+                top:-65px;
+            }
+            &_6{
+                top:-82px;
+            }
+            &_7{
+                top:-60px;
+            }
+            &_8{
+                top:-70px;
+            }
+            &_9{
+                top:-82px;
+            }
+            &_10{
+                top:-82px;
+            }
+            &_11{
+                top:-82px;
+            }
+            img{
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        &_label{
+            position: absolute;
+            top: 20px;
+            right: 40px;
+        }
+        &_label1{
+            position: absolute;
+            top: -10px;
+            left: 20px;
+        }
+        &_label2{
+            position: absolute;
+            top: -20px;
+            right: 40px;
+        }
+        &_name{
+            font-family: 'Alumni Sans', sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 127.5%;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            text-align: center;
+        }
+        &_subname{
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 140%;
+            letter-spacing: 0.105em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            text-align: center;
+        }
+        &_descr{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 140%;
+            letter-spacing: 0.105em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin-top: 21px;
+            padding: 0 30px;
+        }
+        &_cost{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'PT Sans', sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 23px;
+            text-transform: uppercase;
+            color: $hover_color;
+            text-align: center;
+        }
+    }
+}
+
+
+@media screen and (max-width : 1200px) {
+    .catalog{
+        padding: 100px 0 0;
+        &__wrapper{
+            margin-top: 125px;
+        }
+        &__cart{
+            margin: 0 0 100px 0;
+            &:nth-child(1), &:nth-child(5), &:nth-child(9){
+                margin: 0 0 100px 0;
+            }
+            &:nth-child(4), &:nth-child(8), &:nth-child(12){
+                margin: 0 0 100px 0;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width : 991px) {
+    .catalog{
+        padding: 100px 0 20px;
+        &__wrapper{
+            margin-top: 125px;
+            justify-content: space-evenly;
+        }
+        &__cart{
+            margin: 0 0 100px 0;
+            &:nth-child(1), &:nth-child(5), &:nth-child(9){
+                margin: 0 0 100px 0;
+            }
+            &:nth-child(4), &:nth-child(8), &:nth-child(12){
+                margin: 0 0 100px 0;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 575px){
+
+}

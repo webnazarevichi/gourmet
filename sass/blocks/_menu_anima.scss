@@ -1,0 +1,146 @@
+// Colors
+$color-one: white;
+$color-two: #ECF0F1;
+$color-three: #C0392D;
+$color-four: #2980D9;
+
+
+#menu {
+	background: $bg_color;
+	width: 100vw;
+	height: 100vh;
+	padding: 50px 0;
+	color: $color-two;
+	display: none;
+	visibility: visible;
+	opacity: 1;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	border-radius: 3px;
+	transition: all 300ms ease-in-out;
+	position: fixed;
+	top: -100vh;
+	left: 0px;
+	z-index: 9;
+	&.active {
+		top: 0;
+	}
+	ul {
+		list-style-type: none;
+		padding: 0;
+		li {
+			margin: 15px 0;            
+            a{
+                text-decoration: none;
+                display: block;
+                padding: 10px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 27px;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                &:hover{
+                    background: $cart_color;
+                    color: $color-two;
+                }
+            }
+		}
+	}
+}
+
+
+.menu__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.menu__time{
+    margin-top: 20px;
+}
+.menu__social2{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.menu__icons2{
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#toggle {
+	position: relative;
+    display: none;
+	width: 30px;
+	height: 36px;
+	// left: 20px;
+
+	transition: all 300ms ease-in-out;
+	z-index: 10;
+	input {
+		position: absolute;
+		// top: -3px;
+		// left: -3px;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		opacity: 0;
+		cursor: pointer;
+		&:checked {
+			+ span {
+				background: transparent;
+				left: 0;
+				&:after {
+					transform: rotate(45deg) translate(-1px, -12px);
+					left: -7px;
+					background: #fff;
+				}
+				&:before {
+					transform: rotate(-45deg) translate(-4px, 16px);
+					left: -7px;
+					background: #fff;
+				}
+			}
+		}
+	}
+	span {
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background: $color-one;
+		margin-top: 15px;
+		transition: all 0.1s;
+		left: 0;
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background: $color-one;
+			top: -12px;
+			left: 0;
+			transition: all 0.3s;
+		}
+		&:after {
+			top: 12px;
+		}
+	}
+}
+
+
+@media screen and (max-width : 767px) {
+    #toggle{
+        display: block;
+    }
+	#menu{
+		display: flex;
+	}
+}
+
+
+
+
+
+

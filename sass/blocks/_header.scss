@@ -1,0 +1,108 @@
+header{
+    height: auto;
+    background: $bg_color;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    &__wrapper{
+        position: relative;
+        width: calc(100% - 135px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 55px;
+        list-style: none;
+        a{
+            position: relative;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            color: #FFFFFF;
+            text-decoration: none;
+            
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                width: 0;
+                height: 1px;
+                background: $hover_color;
+                transition: 0.5s all;
+            }
+            &:hover::before{
+                width: 100%;
+            }
+        }
+        
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        width: 160px;
+    }
+    &__social{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 135px;
+    }
+    &__icons{
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 21px;
+        color: $bg_color;
+        transition: 0.5s all;
+        &:hover{
+            background: $hover_color;
+            text-decoration: none;
+            color: $bg_color;
+        }
+    }
+}
+
+
+@media screen and (max-width : 767px) {
+    .menu{
+        height: 80px;
+        &__list, &__contact{
+            display: none;
+        }
+        &__wrapper{
+            width: calc(100% - 120px);
+        }
+        &__social{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 120px;
+        }
+    }
+}
+
+@media screen and(max-width: 575px){
+    .menu{
+        height: 70px;
+        &__wrapper{
+            width: calc(100% - 100px);
+        }
+        &__social{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100px;
+        }
+        &__icons{
+            width: 25px;
+            height: 25px;
+            font-size: 16px;
+        }
+    }
+}
